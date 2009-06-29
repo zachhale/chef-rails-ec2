@@ -42,7 +42,7 @@ node[:users].each do |user|
       owner user[:uid]
       group user[:gid]
       mode custom_file[:mode] || 0744
-      variables :content => custom_file[:content]  
+      variables :content => custom_file[:content]
       source "custom.erb"
     end
   end
